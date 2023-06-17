@@ -1,0 +1,136 @@
+/* Estilos globais */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #6c2c9b;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no grid */
+  grid-gap: 20px; /* Espaçamento entre os containers */
+  margin-top: 20px; /* Adicione esta linha para criar uma margem superior */
+  margin-left: 20px; /* Define a margem esquerda */
+  margin-right: 20px; /* Define a margem direita */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Adicionado */
+}
+
+.section {
+  padding: 100px;
+  text-align: center;
+  background-color: #f5f5f5;
+  height: 100px; /* Altura fixa das seções */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Adicione esta linha para animar a mudança de cor de fundo */
+}
+
+.section .small-text {
+  font-size: 23px;
+}
+
+
+h2 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+.section:hover {
+  background-color: #e0d2f0;
+  cursor: pointer;
+}
+
+
+/* Adicione estas classes para animar o texto e o número */
+.section:hover h5,
+.section:hover h2,
+.section:hover h1{
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para tornar o site responsivo */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* 1 coluna no grid */
+  }
+
+  .section {
+    padding: 20px;
+    height: auto; /* Altura automática para se adaptar ao conteúdo */
+  }
+}
+
+/* Estilos para as imagens das seções */
+.section img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de escala ao passar o mouse */
+.section:hover img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+
+/* Estilos para a modal */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  margin: 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  max-width: 90%; /* Defina a largura máxima da modal */
+  max-height: 90%; /* Defina a altura máxima da modal */
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* A imagem se ajustará proporcionalmente dentro da modal */
+}
+
+.modal-header {
+  text-align: center; /* Alinhar o texto ao centro */
+}
+
+.modal-title {
+  margin: 0 auto; /* Centralizar o título horizontalmente */
+}
+
+.green-number {
+  color: #0bb30b;
+}

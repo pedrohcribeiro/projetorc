@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RC PAYHUB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+  <header>
+    <h1>INDICADORES PAYHUB</h1>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h5 class="small-text">Média de Aging</h5>
+      <h1 class="green-number">2</h1>
+    </div>
+    <div class="section">
+      <h2 class="small-text">Backlog Violado</h2>
+      <img src="casos violados.png" alt="Imagem 2" data-toggle="modal" data-target="#modal2">
+    </div>
+    <div class="section">
+      <h2 class="small-text">Backlog Violado (sem issue)</h2>
+      <img src="casos violados.png" alt="Imagem 3" data-toggle="modal" data-target="#modal3">
+    </div>
+    <!-- Adicione aqui mais 3 seções -->
+  </div>
+
+  <!-- Modais -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="modal1Label">Aging</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="0" alt="Imagem 1">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">Imagem 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="imagem2.jpg" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">Imagem 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adicione aqui mais 3 modais -->
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    
+    // Função para exibir a modal correta ao clicar na imagem
+$(document).ready(function() {
+  $('.section img').click(function() {
+    var targetModal = $(this).closest('.section').find('.modal');
+    $(targetModal).modal('show');
+  });
+});
+
+  </script>
+</body>
+</html>
